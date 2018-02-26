@@ -1,0 +1,16 @@
+private sharedPreferences sharedPreferences;
+
+
+// dentro del on create
+sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+//donde se valla a obtener
+
+dato = sharedPreferences.getInt("nombreclave",valor);
+
+
+//donde se vaya a guardar
+
+SharedPreferences.Editor editor = sharedPreferences.edit();
+editor.putInt("nombreclave",valor);
+editor.commit();
